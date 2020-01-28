@@ -1,0 +1,79 @@
+<resources>
+
+    <!-- State Title Text -->
+    <string name="app_name">AMazeByAbigailDanielandKatieBourque</string>
+    <string name="welcome_message">Welcome To The Rave Maze</string>
+    <string name="select_text">Select A:</string>
+    <string name="size">Skill Level:</string>
+
+    <string name="create_maze_algo">Maze Generator:</string>
+    <string-array name="builders">
+        <item>DFS</item>
+        <item>Eller</item>
+        <item>Prim</item>
+    </string-array>
+
+    <string name="driver_maze">Maze Driver:</string>
+    <string-array name="drivers">
+        <item>Manual</item>
+        <item>Wall Follower</item>
+        <item>Wizard</item>
+    </string-array>
+
+    <string name="revisit_button">Load Old Maze</string>
+    <string name="explore_button">Generate New Maze</string>
+
+    <!-- State Generating text-->
+    <string name="generate_act">...Maze Generating...</string>
+    <string name="menu">Return to Menu</string>
+
+    <!--State Play Manually Text-->
+    <!--State PlayAnimation Text-->
+    <string name="manual">Manual</string>
+    <string name="follower">Wall Follower</string>
+    <string name="wiz">Wizard</string>
+    <string name="manual_play">Play Manually</string>
+    <string name="auto_drive">Drive Automatically</string>
+    <string name="toggle_maze">Map</string>
+    <string name="toggle_solution">Solution</string>
+    <string name="toggle_walls">Walls</string>
+    <string name="zoom_in">+</string>
+    <string name="direction">E</string>
+    <string name="zoom_out">-</string>
+    <string name="key_up">UP</string>
+    <string name="key_right">RIGHT</string>
+    <string name="key_left">LEFT</string>
+    <string name="winning">GO2WINNING</string>
+    <string name="losing">GO2LOSING</string>
+    <string name="button_start">START</string>
+    <string name="button_pause">PAUSE</string>
+
+    <!--State Winning Text -->
+
+    <!--int variables-->
+    <string name="path_length">path</string>
+    <string name="battery_level">battery</string>
+    <string name="shortest_path_length">shortestPath</string>
+    <string name="TotalPath">Total Path Length:</string>
+    <string name="TotalBat">Total Battery Used:</string>
+    <string name="ShortestPath">Shortest Path Length:</string>
+
+
+
+
+
+    <string name="message_winning">YOU WON</string>
+
+    <!--State Losing Text-->
+    <string name="message_losing1">YOU LOST</string>
+    <string name="message_losing2">PLAY AGAIN</string>
+
+
+    <string name="title_activity_play_manually">Play Manually</string>
+    <string name="title_activity_play_animation">Play Animation</string>
+    <string name="title_activity_losing">LosingActivity</string>
+    <string name="title">GO BACK TO TITLE</string>
+
+
+
+</resources>

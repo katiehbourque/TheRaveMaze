@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/maze_bottom"
+    tools:context="edu.wm.cs.cs301.abigaildanielandkatiebourque.UI.PlayAnimationActivity">
+
+
+    <ProgressBar
+        android:id="@+id/progressBattery"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="223dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:layout_marginBottom="148dp"
+        android:max="3000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/gen_menu"
+        android:layout_width="339dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginBottom="540dp"
+        android:text="@string/menu"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <ToggleButton
+        android:id="@+id/toggleDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="460dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/button_start"
+        android:textOff="@string/button_start"
+        android:textOn="@string/button_pause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <edu.wm.cs.cs301.abigaildanielandkatiebourque.gui.MazePanel
+        android:id="@+id/maze_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <TextView
+        android:id="@+id/direction"
+        android:layout_width="97dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:text="@string/direction"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggle_walls"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/toggle_walls"
+        android:textOff="@string/toggle_walls"
+        android:textOn="@string/toggle_walls"
+        app:layout_constraintEnd_toStartOf="@+id/toggle_path"
+        app:layout_constraintHorizontal_bias="0.733"
+        app:layout_constraintStart_toEndOf="@+id/toggle_map"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggle_map"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="68dp"
+        android:text="@string/toggle_maze"
+        android:textOff="@string/toggle_maze"
+        android:textOn="@string/toggle_maze"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/toggle_path"
+        android:layout_width="100dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:text="@string/toggle_solution"
+        android:textOff="@string/toggle_solution"
+        android:textOn="@string/toggle_solution"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/up_key"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/key_up"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/left_key"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/key_left"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right_key"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/right_key"
+        android:layout_width="65dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/key_right"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/zoom_in"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginBottom="464dp"
+        android:text="@string/zoom_in"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_map" />
+
+    <Button
+        android:id="@+id/zoom_out"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/zoom_out"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/zoom_in"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_map" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/amazebackground"
+    tools:context="edu.wm.cs.cs301.abigaildanielandkatiebourque.UI.AMazeActivity">
+
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="265dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/welcome_message"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/welcome_message" />
+
+    <TextView
+        android:id="@+id/select_text"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="128dp"
+        android:text="@string/select_text"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/select_text" />
+
+    <TextView
+        android:id="@+id/size_message"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/size"
+        android:textColor="?attr/colorBackgroundFloating"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/size_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        app:layout_constraintVertical_bias="0.379" />
+
+
+    <SeekBar
+        android:id="@+id/size_bar"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="128dp"
+        android:max="14"
+        android:progressTint="@color/colorPrimary"
+        android:thumb="@android:drawable/btn_star_big_on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_text"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/builder_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/create_maze_algo"
+        android:textColor="#F0EBEB"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/size_bar" />
+
+    <Spinner
+        android:id="@+id/builder"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/builder_message"></Spinner>
+
+    <TextView
+        android:id="@+id/driver_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/driver_maze"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/builder" />
+
+    <Spinner
+        android:id="@+id/driver"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver_message"
+        app:layout_constraintVertical_bias="0.0"></Spinner>
+
+
+    <Button
+        android:id="@+id/explore_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="switchtoGenerating"
+        android:text="@string/explore_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver"
+        app:layout_constraintVertical_bias="0.378" />
+
+    <Button
+        android:id="@+id/revisit_button"
+        android:layout_width="170dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/revisit_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/explore_button"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/driver"
+        app:layout_constraintVertical_bias="0.378" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
